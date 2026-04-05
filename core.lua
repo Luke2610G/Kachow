@@ -3,7 +3,7 @@ local randomImages = {}
 local antalBilleder = 3 -- Ret til dit faktiske antal billeder
 
 for i = 1, antalBilleder do
-    table.insert(randomImages, "Interface\\AddOns\\LucasAddon\\Textures\\billede (" .. i .. ").tga")
+    table.insert(randomImages, "Interface\\AddOns\\Kachow\\Textures\\billede (" .. i .. ").tga")
 end
 
 -- Opret ramme og tekstur
@@ -20,7 +20,7 @@ texture:SetAllPoints(imageFrame)
 -- ==========================================
 local function AffyrKachow()
     -- Spil lyden
-    PlaySoundFile("Interface\\AddOns\\LucasAddon\\Sounds\\lyd.ogg", "Master")
+    PlaySoundFile("Interface\\AddOns\\Kachow\\Sounds\\lyd.ogg", "Master")
     
     -- Vis et tilfældigt billede
     local randomIndex = math.random(1, #randomImages)
@@ -40,8 +40,8 @@ local eventFrame = CreateFrame("Frame")
 eventFrame:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
 
 eventFrame:SetScript("OnEvent", function(self, event, unitTarget, castGUID, spellID)
-    -- Kig i vores LucasAddon_Spells liste fra spells.lua
-    if unitTarget == "player" and LucasAddon_Spells[spellID] then
+    -- Kig i vores Kachow_Spells liste fra spells.lua
+    if unitTarget == "player" and Kachow_Spells[spellID] then
         AffyrKachow()
     end
 end)
@@ -49,7 +49,7 @@ end)
 -- ==========================================
 -- 2. TRIGGER VIA CHAT KOMMANDO (/kachow)
 -- ==========================================
-SLASH_LUCASKACHOW1 = "/kachow"
-SlashCmdList["LUCASKACHOW"] = function(msg)
+SLASH_KACHOW1 = "/kachow"
+SlashCmdList["KACHOW"] = function(msg)
     AffyrKachow()
 end

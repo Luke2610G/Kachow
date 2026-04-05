@@ -1,0 +1,8 @@
+## Interface: 120001
+## Title: Kachow
+## Notes: Spiller en lyd og viser et billede, når jeg bruger min movement buff.
+## Author: Dig
+## Version: 1.3
+
+spells.lua
+core.lua

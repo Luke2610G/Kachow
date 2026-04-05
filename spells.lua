@@ -1,7 +1,7 @@
 -- Dette er oversigten over alle de spells, der trigger addon'en.
 -- Du kan bare tilføje nye linjer her, når dine venner mangler noget.
 
-LucasAddon_Spells = {
+Kachow_Spells = {
     -- === MONK ===
     [101545] = true, -- Flying Serpent Kick (Retail)
     [109132] = true, -- Roll (Retail)
