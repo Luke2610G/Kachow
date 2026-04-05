@@ -1,6 +1,6 @@
 -- Opret automatisk listen over billeder
 local randomImages = {}
-local antalBilleder = 3 -- Ret til dit faktiske antal billeder
+local antalBilleder = 11 -- Ret til dit faktiske antal billeder
 
 for i = 1, antalBilleder do
     table.insert(randomImages, "Interface\\AddOns\\Kachow\\Textures\\billede (" .. i .. ").tga")
