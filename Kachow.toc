@@ -1,8 +1,9 @@
-## Interface: 120001
+## Interface: 120100
 ## Title: Kachow
 ## Notes: Spiller en lyd og viser et billede, når jeg bruger min movement buff.
 ## Author: Dig
-## Version: 1.4
+## Version: 1.5
+## IconTexture: Interface\AddOns\Kachow\Textures\billede (1).tga
 
 spells.lua
 core.lua
